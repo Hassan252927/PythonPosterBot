@@ -10,7 +10,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/generate_posters": {"origins": "https://python-poster-bot.vercel.app"}})
+CORS(app,supports_credentials=True)  # Enable CORS for frontend access
 
 # Define directories
 UPLOAD_FOLDER = "uploads"
@@ -261,3 +261,6 @@ def generate_posters():
     except Exception as e:
         print(f"Error generating posters: {e}")
         return jsonify({"error": str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(port=3000, debug=True)

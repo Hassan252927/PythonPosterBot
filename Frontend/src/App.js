@@ -85,7 +85,7 @@ const App = () => {
                     <div key={index} style={{ textAlign: "center" }}>
                         <h3>Poster {index + 1}</h3>
                         <img
-                            src={`http://localhost:5001/static/output/${image}`}
+                            src={`https://pythonposterbot-production.up.railway.app/static/output/${image}`}
                             alt={`Poster ${index + 1}`}
                             style={{
                                 width: "100%",

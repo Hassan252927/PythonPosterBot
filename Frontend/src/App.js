@@ -25,7 +25,7 @@ const App = () => {
     
         try {
             // Update the URL to match the backend route
-            const response = await fetch("http://localhost:5001/generate_posters", {
+            const response = await fetch("https://pythonposterbot-production.up.railway.app/generate_posters", {
                 method: "POST",
                 body: formData
             });

@@ -10,7 +10,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/": {"origins": "https://python-poster-bot.vercel.app"}})
+CORS(app, resources={r"/generate_posters": {"origins": "https://python-poster-bot.vercel.app"}})
 
 # Define directories
 UPLOAD_FOLDER = "uploads"
@@ -207,6 +207,7 @@ def overlay_image_on_template(template_path, input_image_path, output_path, posi
 
 @app.route("/generate_posters", methods=["POST"])
 def generate_posters():
+    print("Received request to generate posters...")
     """Main function to handle poster generation"""
     try:
         input_image_path = "uploads/image1.jpg"  # Replace with your image path

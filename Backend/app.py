@@ -10,7 +10,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/": {"origins": "https://python-poster-bot.vercel.app"}})
 
 # Define directories
 UPLOAD_FOLDER = "uploads"

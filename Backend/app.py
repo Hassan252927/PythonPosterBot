@@ -11,7 +11,7 @@ from flask_cors import cross_origin
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/generate_posters": {"origins": "https://python-poster-bot.vercel.app"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 # Define directories

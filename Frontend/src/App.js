@@ -9,7 +9,9 @@ const App = () => {
 
     // Handle file input change
     const handleFileChange = (event) => {
-        setImage(event.target.files[0]);
+        const file = event.target.files[0];
+        console.log("Selected file: ", file);  // Debugging: log selected file
+        setImage(file);
     };
 
     // Upload the image and request the generation of posters
@@ -18,23 +20,25 @@ const App = () => {
             alert("Please select an image first.");
             return;
         }
-    
+
         setLoading(true);
         const formData = new FormData();
         formData.append("image", image);
-    
+
         try {
-            // Update the URL to match the backend route
+            // Update the URL to match the backend route and ensure it's HTTPS
+            console.log("Sending request to the backend...");
             const response = await fetch("https://pythonposterbot-production.up.railway.app/generate_posters", {
                 method: "POST",
                 body: formData
             });
-    
+
+            console.log("Backend response status:", response.status);  // Debugging: log status
             const data = await response.json();
-            console.log("Backend Response:", data);
-    
+            console.log("Backend Response Data:", data);  // Debugging: log response data
+
             if (!response.ok) throw new Error(data.error || "Unknown error occurred");
-    
+
             setTitle(data.title);
             setDescription(data.description);
             setOutputImages(data.output_files);
@@ -45,7 +49,7 @@ const App = () => {
             setLoading(false);
         }
     };
-    
+
     return (
         <div style={{ textAlign: "center", fontFamily: "Arial, sans-serif", padding: "20px" }}>
             <h1>Dynamic Book Poster Generator</h1>
@@ -81,22 +85,25 @@ const App = () => {
                     gap: "20px"
                 }}
             >
-                {outputImages.map((image, index) => (
-                    <div key={index} style={{ textAlign: "center" }}>
-                        <h3>Poster {index + 1}</h3>
-                        <img
-                            src={`https://pythonposterbot-production.up.railway.app/static/output/${image}`}
-                            alt={`Poster ${index + 1}`}
-                            style={{
-                                width: "100%",
-                                maxWidth: "400px",
-                                border: "2px solid #ccc",
-                                boxShadow: "2px 2px 10px rgba(0,0,0,0.2)",
-                                borderRadius: "10px"
-                            }}
-                        />
-                    </div>
-                ))}
+                {outputImages.map((image, index) => {
+                    console.log(`Displaying poster: ${image}`);  // Debugging: log each poster
+                    return (
+                        <div key={index} style={{ textAlign: "center" }}>
+                            <h4>Poster {index + 1}</h4>
+                            <img
+                                src={`https://pythonposterbot-production.up.railway.app/static/output/${image}`}
+                                alt={`Poster ${index + 1}`}
+                                style={{
+                                    width: "100%",
+                                    maxWidth: "400px",
+                                    border: "2px solid #ccc",
+                                    boxShadow: "2px 2px 10px rgba(0,0,0,0.2)",
+                                    borderRadius: "10px"
+                                }}
+                            />
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );

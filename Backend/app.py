@@ -7,10 +7,11 @@ import base64
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_cors import cross_origin
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://python-poster-bot.vercel.app"}})
+CORS(app, resources={r"/generate_posters": {"origins": "https://python-poster-bot.vercel.app"}})
 
 
 # Define directories
@@ -207,6 +208,7 @@ def overlay_image_on_template(template_path, input_image_path, output_path, posi
     return None
 
 @app.route("/generate_posters", methods=["POST"])
+@cross_origin(origins="https://python-poster-bot.vercel.app")
 def generate_posters():
     """Main function to handle poster generation"""
     try:

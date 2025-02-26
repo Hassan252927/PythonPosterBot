@@ -1,0 +1,66 @@
+{
+  "templates/template1-Photoroom.png": {
+    "title": { "x": 74, "y": 46, "font_size": 48, "font_color": "#222222", "words_per_line": 4, "font_path": "fonts/NightBlood-drrBZ.ttf" },
+    "description": { "x": 390, "y": 220, "font_size": 28, "font_color": "#222222", "words_per_line": 3, "font_path": "fonts/NightBlood-drrBZ.ttf" }
+  },
+  "templates/template2-Photoroom.png": {
+    "title": { "x": 1280, "y": 450, "font_size": 100, "font_color": "#222222", "words_per_line": 5, "font_path": "fonts/NightBlood-drrBZ.ttf" },
+    "description": { "x": 2000, "y": 450, "font_size": 50, "font_color": "#222222", "words_per_line": 4, "font_path": "fonts/NightBlood-drrBZ.ttf" }
+  },
+  "templates/template3-Photoroom.png": {
+    "title": { "x": 30, "y": 170, "font_size": 70, "font_color": "#494645", "words_per_line": 3, "font_path": "fonts/burkhan.otf" },
+    "description": { "x": 70, "y": 340, "font_size": 26, "font_color": "#494645", "words_per_line": 4, "font_path": "fonts/burkhan.otf" }
+  },
+  "templates/template4-Photoroom.png": {
+    "title": { "x": 1290, "y": 520, "font_size": 100, "font_color": "#FF4500", "words_per_line": 4, "font_path": "fonts/burkhan.otf" },
+    "description": { "x": 1950, "y": 520, "font_size": 55, "font_color": "#3498db", "words_per_line": 4, "font_path": "fonts/burkhan.otf" }
+  },
+  "templates/template5-Photoroom.png": {
+    "title": { "x": 610, "y": 290, "font_size": 90, "font_color": "#542700", "words_per_line": 5, "font_path": "fonts/NightBlood-drrBZ.ttf" },
+    "description": { "x": 630, "y": 480, "font_size": 50, "font_color": "#542700", "words_per_line": 3, "font_path": "fonts/NightBlood-drrBZ.ttf" }
+  },
+  "templates/template6-Photoroom.png": {
+    "title": { "x": 190, "y": 160, "font_size": 100, "font_color": "#542700", "words_per_line": 4, "font_path": "fonts/NightBlood-drrBZ.ttf" },
+    "description": { "x": 160, "y": 370, "font_size": 55, "font_color": "#542700", "words_per_line": 6, "font_path": "fonts/NightBlood-drrBZ.ttf" }
+  },
+  "templates/template7-Photoroom.png": {
+    "title": { "x": 200, "y": 300, "font_size": 110, "font_color": "#002bb2", "words_per_line": 3, "font_path": "fonts/LobsterBisque.ttf" },
+    "description": { "x": 235, "y": 500, "font_size": 50, "font_color": "#001146", "words_per_line": 4, "font_path": "fonts/LobsterBisque.ttf" }
+  },
+  "templates/template8-Photoroom.png": {
+    "title": { "x": 950, "y": 80, "font_size": 110, "font_color": "#002bb2", "words_per_line": 4, "font_path": "fonts/LobsterBisque.ttf" },
+    "description": { "x": 1300, "y": 540, "font_size": 55, "font_color": "#001146", "words_per_line": 6, "font_path": "fonts/LobsterBisque.ttf" }
+  },
+  "templates/template9-Photoroom.png": {
+    "title": { "x": 100, "y": 140, "font_size": 80, "font_color": "#ffffff", "words_per_line": 5, "font_path": "fonts/GothamSerifBold.ttf" },
+    "description": { "x": 20, "y": 590, "font_size": 32, "font_color": "#ffffff", "words_per_line": 4, "font_path": "fonts/GothamSerifBold.ttf" }
+  },
+  "templates/template10-Photoroom.png": {
+    "title": { "x": 910, "y": 75, "font_size": 120, "font_color": "#ffffff", "words_per_line": 3, "font_path": "fonts/GothamSerifBold.ttf" },
+    "description": { "x": 120, "y": 560, "font_size": 70, "font_color": "#ffffff", "words_per_line": 4, "font_path": "fonts/GothamSerifBold.ttf" }
+  },
+  "templates/template11-Photoroom.png": {
+    "title": { "x": 280, "y": 120, "font_size": 120, "font_color": "#000000", "words_per_line": 4, "font_path": "fonts/Railway.otf" },
+    "description": { "x": 720, "y": 390, "font_size": 26, "font_color": "#000000", "words_per_line": 3, "font_path": "fonts/Railway.otf" }
+  },
+  "templates/template12-Photoroom.png": {
+    "title": { "x": 1080, "y": 70, "font_size": 120, "font_color": "#000000", "words_per_line": 5, "font_path": "fonts/Railway.otf" },
+    "description": { "x": 1690, "y": 500, "font_size": 50, "font_color": "#000000", "words_per_line": 5, "font_path": "fonts/Railway.otf" }
+  },
+  "templates/template13-Photoroom.png": {
+    "title": { "x": 190, "y": 80, "font_size": 120, "font_color": "#ffffff", "words_per_line": 4, "font_path": "fonts/BalooDa-Regular.ttf" },
+    "description": { "x": 220, "y": 350, "font_size": 50, "font_color": "#ffffff", "words_per_line": 5, "font_path": "fonts/BalooDa-Regular.ttf" }
+  },
+  "templates/template14-Photoroom.png": {
+    "title": { "x":1025, "y": 95, "font_size": 120, "font_color": "#ffffff", "words_per_line": 4, "font_path": "fonts/BalooDa-Regular.ttf" },
+    "description": { "x": 200, "y": 550, "font_size": 54, "font_color": "#ffffff", "words_per_line": 4, "font_path": "fonts/BalooDa-Regular.ttf" }
+  },
+  "templates/template15-Photoroom.png": {
+    "title": { "x": 340, "y": 160, "font_size": 120, "font_color": "#005195", "words_per_line": 2, "font_path": "fonts/BebasNeueRegular.ttf" },
+    "description": { "x": 300, "y": 370, "font_size": 50, "font_color": "#005195", "words_per_line": 6, "font_path": "fonts/BebasNeueRegular.ttf" }
+  },
+  "templates/template16-Photoroom.png": {
+    "title": { "x": 960, "y": 90, "font_size": 120, "font_color": "#0046ff", "words_per_line": 2, "font_path": "fonts/GothamSerifBold.ttf" },
+    "description": { "x": 1140, "y": 600, "font_size": 70, "font_color": "#0046ff", "words_per_line": 5, "font_path": "fonts/GothamSerifBold.ttf" }
+  }
+}

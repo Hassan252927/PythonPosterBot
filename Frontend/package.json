@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "postinstall": "chmod -R 755 node_modules/.bin",
+    "postinstall": "npm-run-all --parallel fix-permissions",
+    "fix-permissions": "node -e \"require('fs').chmodSync('node_modules/.bin', 0o755)\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -32,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

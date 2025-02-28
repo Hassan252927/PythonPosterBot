@@ -28,7 +28,7 @@ const App = () => {
         try {
             // Update the URL to match the backend route and ensure it's HTTPS
             console.log("Sending request to the backend...");
-            const response = await fetch("https://pythonposterbot-production.up.railway.app/generate_posters", {
+            const response = await fetch("http://127.0.0.1:5001/generate_posters", {
                 method: "POST",
                 body: formData
             });
@@ -91,7 +91,7 @@ const App = () => {
                         <div key={index} style={{ textAlign: "center" }}>
                             <h4>Poster {index + 1}</h4>
                             <img
-                                src={`https://pythonposterbot-production.up.railway.app/static/output/${image}`}
+                                src={`http://127.0.0.1:5001/static/output/${image}`}
                                 alt={`Poster ${index + 1}`}
                                 style={{
                                     width: "100%",

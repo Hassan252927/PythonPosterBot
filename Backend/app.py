@@ -219,6 +219,15 @@ def overlay_image_on_template(template_path, input_image_path, output_path, posi
 def generate_posters():
     """Main function to handle poster generation"""
     try:
+        # **Step 1: Delete all previous output files**
+        for file in os.listdir(OUTPUT_FOLDER):
+            file_path = os.path.join(OUTPUT_FOLDER, file)
+            try:
+                os.remove(file_path)
+                print(f"Deleted old output file: {file_path}")
+            except Exception as e:
+                print(f"Error deleting file {file_path}: {e}")
+
         input_image_path = "uploads/image1.jpg"  # Replace with your image path
         
         book_title, book_description = analyze_book_image(input_image_path)
@@ -232,12 +241,6 @@ def generate_posters():
         for index, template in enumerate(TEMPLATES):
             try:
                 output_filename = f"output{index + 1}.png"
-                output_path = os.path.join(OUTPUT_FOLDER, output_filename)
-
-# Delete the existing file before writing new content
-                if os.path.exists(output_path):
-                    os.remove(output_path)
-
                 output_path = os.path.join(OUTPUT_FOLDER, output_filename)
 
                 print(f"Processing template {index + 1}: {template['path']}")
@@ -270,6 +273,7 @@ def generate_posters():
     except Exception as e:
         print(f"Error generating posters: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 
 if __name__ == "__main__":

@@ -11,10 +11,11 @@ from flask_cors import cross_origin
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "https://python-poster-bot.vercel.app"}})
+
 @app.after_request
 def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Origin'] = 'https://python-poster-bot.vercel.app'
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
     return response
@@ -272,4 +273,4 @@ def generate_posters():
 
 
 if __name__ == "__main__":
-    app.run(port=5001, debug = True)
+    app.run(host="0.0.0.0", port=5001, debug=True)

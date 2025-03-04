@@ -8,12 +8,12 @@
     "description": { "x": 2000, "y": 450, "font_size": 50, "font_color": "#222222", "words_per_line": 4, "font_path": "fonts/NightBlood-drrBZ.ttf" }
   },
   "templates/template3-Photoroom.png": {
-    "title": { "x": 30, "y": 170, "font_size": 70, "font_color": "#494645", "words_per_line": 3, "font_path": "fonts/burkhan.otf" },
-    "description": { "x": 70, "y": 340, "font_size": 26, "font_color": "#494645", "words_per_line": 4, "font_path": "fonts/burkhan.otf" }
+    "title": { "x": 30, "y": 170, "font_size": 70, "font_color": "#494645", "words_per_line": 3, "font_path": "fonts/Burkhan.otf" },
+    "description": { "x": 70, "y": 340, "font_size": 26, "font_color": "#494645", "words_per_line": 4, "font_path": "fonts/Burkhan.otf" }
   },
   "templates/template4-Photoroom.png": {
-    "title": { "x": 1290, "y": 520, "font_size": 100, "font_color": "#FF4500", "words_per_line": 4, "font_path": "fonts/burkhan.otf" },
-    "description": { "x": 1950, "y": 520, "font_size": 55, "font_color": "#3498db", "words_per_line": 4, "font_path": "fonts/burkhan.otf" }
+    "title": { "x": 1290, "y": 520, "font_size": 100, "font_color": "#FF4500", "words_per_line": 4, "font_path": "fonts/Burkhan.otf" },
+    "description": { "x": 1950, "y": 520, "font_size": 55, "font_color": "#3498db", "words_per_line": 4, "font_path": "fonts/Burkhan.otf" }
   },
   "templates/template5-Photoroom.png": {
     "title": { "x": 610, "y": 290, "font_size": 90, "font_color": "#542700", "words_per_line": 5, "font_path": "fonts/NightBlood-drrBZ.ttf" },

@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_cors import cross_origin
+from werkzeug.utils import secure_filename
+
 
 load_dotenv()
 app = Flask(__name__)
@@ -219,16 +221,16 @@ def overlay_image_on_template(template_path, input_image_path, output_path, posi
 def generate_posters():
     """Main function to handle poster generation"""
     try:
-        # **Step 1: Delete all previous output files**
-        for file in os.listdir(OUTPUT_FOLDER):
-            file_path = os.path.join(OUTPUT_FOLDER, file)
-            try:
-                os.remove(file_path)
-                print(f"Deleted old output file: {file_path}")
-            except Exception as e:
-                print(f"Error deleting file {file_path}: {e}")
+        if 'image' not in request.files:
+            return jsonify({"error": "No file part"}), 400
 
-        input_image_path = "uploads/image1.jpg"  # Replace with your image path
+        file = request.files['image']
+    
+        if file.filename == '':
+            return jsonify({"error": "No selected file"}), 400
+        filename = secure_filename(file.filename)
+        input_image_path = os.path.join(UPLOAD_FOLDER, filename)  # Replace with your image path
+        file.save(input_image_path)
         
         book_title, book_description = analyze_book_image(input_image_path)
         output_files = []
@@ -241,6 +243,11 @@ def generate_posters():
         for index, template in enumerate(TEMPLATES):
             try:
                 output_filename = f"output{index + 1}.png"
+                output_path = os.path.join(OUTPUT_FOLDER, output_filename)
+                
+                if os.path.exists(output_path):
+                    os.remove(output_path)
+
                 output_path = os.path.join(OUTPUT_FOLDER, output_filename)
 
                 print(f"Processing template {index + 1}: {template['path']}")
@@ -273,6 +280,7 @@ def generate_posters():
     except Exception as e:
         print(f"Error generating posters: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 
 
